@@ -27,10 +27,10 @@ while len(alunosAprovados) < 5:
         print(f"O aluno {nomeAluno} ainda não foi aprovado. Precisa fazer 3a VA.")
         print("-------------------------------------------------------")
         nota3 = int(input("Insira a terceira nota: "))
-        lista.append(nota3)
         mediaAluno = (nota3 + max(lista))/2
         print(f"A nova média do aluno {nomeAluno} é: {mediaAluno}")
         print("-------------------------------------------------------")
+        lista.append(nota3)
     if mediaAluno >= 7:
         print(f"Aluno {nomeAluno} foi aprovado com média {mediaAluno}")
         print("-------------------------------------------------------")
