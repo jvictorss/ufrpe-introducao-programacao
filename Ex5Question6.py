@@ -16,7 +16,23 @@ printed at all.
 
 centimeters = float(input("Quantos centímetros você quer converter? "))
 
-yard = centimeters / 91,44
-inches = centimeters / 2,54
-feet = inches * 12
+inches = centimeters / 2.54
+feet = centimeters / 30.48
+yard = centimeters / 91.44
 
+if yard >= 1:
+    int(yard)
+    centimeters -= (91.44 * yard)
+    feet = centimeters / 30.48
+    int(feet)
+    centimeters -= (30.48 * feet)
+    inches = centimeters / 2.54
+    print(f"This is {yard} yards, {feet} feet and {inches} inches.")
+elif 0 < yard <= 1:
+    int(feet)
+    int(yard)
+    centimeters -= (91.44+30.48)
+    inches = centimeters / 2.54
+    print(f"This is {yard} yard, {feet} foot and {inches} inches.")
+elif yard == 0 and feet == 0:
+    print(f"This is {inches} inches.")
